@@ -231,8 +231,8 @@ class Line(object):
         self.start = start.clone()
         self.end = end.clone()
 
-        self.i_start = self.start
-        self.i_end = self.end
+        self.i_start = self.start.clone()
+        self.i_end = self.end.clone()
 
         self.number_of_clones = 0
 
@@ -731,7 +731,7 @@ class Line(object):
             print(line2)  # Should print: Line[(0, 1), (10, 20)]
         """
         # --------------------------------------------------------------
-        # TODO: 13.
+        # done: 13.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -739,6 +739,9 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+
+        self.start = self.i_start
+        self.end = self.i_end
 
 
 ########################################################################
