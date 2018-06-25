@@ -231,10 +231,8 @@ class Line(object):
         self.start = start.clone()
         self.end = end.clone()
 
-        line = self.clone()
-
-        self.initial_start = line.start
-        self.initial_end = line.end
+        self.i_start = self.start
+        self.i_end = self.end
 
         self.number_of_clones = 0
 
@@ -741,9 +739,6 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
-
-        self.start = self.initial_start
-        self.end = self.initial_end
 
 
 ########################################################################
